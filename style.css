@@ -44,7 +44,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 8rem;
+  padding-top: 9rem;
   padding-bottom: 4.9rem;
   min-height: 100dvh;
 }
@@ -92,7 +92,7 @@ body {
 
 .ping-comming-soon__form {
   width: 100%;
-  margin-bottom: 9.4rem;
+  margin-bottom: 8.4rem;
 }
 
 .form {
@@ -201,6 +201,12 @@ body {
 
 .ping-comming-soon__social li:hover svg {
   fill: var(--White);
+}
+
+.ping-comming-soon__copy {
+  font-size: 1rem;
+  font-weight: var(--light);
+  color: var(--Gray);
 }
 
 @media screen and (max-width: 678px) {
