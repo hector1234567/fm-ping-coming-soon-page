@@ -1,0 +1,253 @@
+@font-face {
+  font-family: "Libre Franklin";
+  src: url(fonts/LibreFranklin-VariableFont_wght.ttf);
+}
+
+:root {
+  /* Primary */
+
+  --Blue: hsl(223, 87%, 63%);
+
+  /* Secondary */
+
+  --Pale-Blue: hsl(223, 100%, 88%);
+  --Light-Red: hsl(354, 100%, 66%);
+
+  /* Neutral */
+
+  --Gray: hsl(0, 0%, 59%);
+  --Very-Dark-Blue: hsl(209, 33%, 12%);
+  --White: hsl(0, 0%, 100%);
+
+  --light: 300;
+  --Semibold: 600;
+  --Bold: 700;
+
+  --Shadow: 0 0.5rem 1rem 0.2rem hsla(223, 87%, 63%, 23.04%);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Libre Franklin", sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 8rem;
+  padding-bottom: 4.9rem;
+  min-height: 100dvh;
+}
+
+.ping-comming-soon__header {
+  width: 63.7rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ping-comming-soon__logo {
+  margin-bottom: 4rem;
+}
+
+.ping-comming-soon__logo img {
+  width: 9rem;
+}
+
+.ping-comming-soon__heading {
+  font-size: 4.8rem;
+  font-weight: var(--light);
+  color: var(--Gray);
+  line-height: 125%;
+  margin-bottom: 1.6rem;
+}
+
+.ping-comming-soon__heading strong {
+  font-weight: var(--Bold);
+  color: var(--Very-Dark-Blue);
+}
+
+.ping-comming-soon__subheading {
+  font-size: 2rem;
+  font-weight: var(--light);
+  color: var(--Very-Dark-Blue);
+  margin-bottom: 4rem;
+  display: inline-block;
+}
+
+.ping-comming-soon__main {
+  width: 63.7rem;
+}
+
+.ping-comming-soon__form {
+  width: 100%;
+  margin-bottom: 9.4rem;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  position: relative;
+}
+
+.form__input,
+.form__input:focus {
+  border-radius: 2.8rem;
+  height: 5.6rem;
+  border: 0.1rem solid var(--Pale-Blue);
+  width: 100%;
+  padding-left: 3rem;
+  font-size: 1.6rem;
+  font-weight: var(--light);
+  color: var(--Very-Dark-Blue);
+  outline: none;
+}
+
+.form__input::placeholder {
+  font-size: inherit;
+  font-weight: inherit;
+  color: var(--Pale-Blue);
+}
+
+.form__input:focus:invalid {
+  border: 0.1rem solid var(--Light-Red);
+}
+
+.form__button {
+  padding: 0 6.2rem;
+  display: flex;
+  align-items: center;
+  height: 5.6rem;
+  text-wrap: nowrap;
+  background-color: var(--Blue);
+  border: none;
+  border-radius: 5.6rem;
+  box-shadow: var(--Shadow);
+  color: var(--White);
+  font-size: 1.6rem;
+  font-weight: var(--Semibold);
+  cursor: pointer;
+}
+
+.form__button:hover {
+  opacity: 0.8;
+}
+
+.form__error-message {
+  position: absolute;
+  font-size: 1.2rem;
+  font-style: italic;
+  color: var(--Light-Red);
+  font-weight: var(--light);
+  bottom: -2rem;
+  left: 3rem;
+  display: none;
+}
+
+.form__input:focus:invalid ~ .form__error-message {
+  display: inline-block;
+}
+
+.ping-comming-soon__illustration img {
+  width: 100%;
+}
+
+.ping-comming-soon__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: auto;
+  margin-top: 7.2rem;
+}
+
+.ping-comming-soon__social {
+  list-style: none;
+  display: flex;
+  gap: 1.171rem;
+  margin-bottom: 2.5rem;
+}
+
+.ping-comming-soon__social li {
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 3.2rem;
+  border: 0.1rem solid var(--Pale-Blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.ping-comming-soon__social li:hover {
+  background-color: var(--Blue);
+}
+
+.ping-comming-soon__social svg {
+  fill: var(--Blue);
+  width: 1.469rem;
+}
+
+.ping-comming-soon__social li:hover svg {
+  fill: var(--White);
+}
+
+@media screen and (max-width: 678px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media screen and (max-width: 548px) {
+  body {
+    padding-top: 81px;
+    padding-bottom: 37px;
+  }
+
+  .ping-comming-soon__logo {
+    width: 56px;
+  }
+
+  .form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .form__button {
+    justify-content: center;
+  }
+
+  .ping-comming-soon__header {
+    width: 100%;
+    padding: 0 2rem;
+  }
+
+  .ping-comming-soon__heading {
+    font-size: 22px;
+  }
+
+  .ping-comming-soon__subheading {
+    font-size: 12px;
+  }
+
+  .ping-comming-soon__main {
+    width: 100%;
+    padding: 0 2rem;
+  }
+
+  .ping-comming-soon__footer {
+    width: 100%;
+    padding: 0 2rem;
+  }
+}
